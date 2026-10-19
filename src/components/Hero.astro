@@ -1,0 +1,166 @@
+---
+import astroLogo from "../assets/astro.svg";
+import background from "../assets/background.svg";
+
+import tessara from "../assets/tessara_banner.png" 
+---
+
+<div id="container">
+  <img id="background" src={background.src} alt="" fetchpriority="high" />
+
+  <main>
+    <section id="hero">
+      <div class="parent-div">
+        <div class="div-child">
+           <h1> Wer'e <span class="gradient-text">TessaraDev</span></h1>
+            <p>TessaraDev provides modern IT solutions, web development, and digital strategies to drive continuous growth for your business in the Philippines.</p>
+           <div id="links">
+            <a class="button primary" href="#explore">Explore Projects</a>
+          </div>
+        </div>
+        <div class="div-child">
+          
+          <img id="tessara" src={tessara.src} width="800" height="600" alt="Heropage" />
+        </div>
+      </div>
+     
+      <div class="icon-container">
+  <!-- Facebook Icon -->
+  <div class="icon">
+    <a href="ILAGAY_ANG_FB_LINK_DITO" target="_blank" aria-label="Facebook">
+      <i class="fa-brands fa-facebook">Facebook</i>
+    </a>
+  </div>
+
+  <!-- Email Icon -->
+  <div class="icon">
+    <a href="mailto:ILAGAY_ANG_EMAIL_DITO" aria-label="Email">
+      <i class="fa-solid fa-envelope">Email</i>
+    </a>
+  </div>
+
+  <!-- GitHub Icon -->
+  <div class="icon">
+    <a href="ILAGAY_ANG_GITHUB_LINK_DITO" target="_blank" aria-label="GitHub">
+      <i class="fa-brands fa-github">Github</i>
+    </a>
+  </div>
+</div>
+
+    </section>
+  </main>
+</div>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+  }
+  .parent-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: auto;
+  }
+  .child-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   width: auto;
+   height: auto;
+  }
+ .icon-container {
+  display: flex;
+  justify-content: center; 
+  gap: 1.5rem;                 
+  margin-top: 1.5rem;          
+  margin-left: 30px;           
+  margin-bottom: 20px;        
+}
+
+/* Disenyo at Animation ng bawat icon link */
+.icon a {
+  /* INALIS: position: absolute, bottom, at left para hindi magpatong-patong */
+  color: #9ca3af; 
+  font-size: 1.75rem; 
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+/* Effect kapag itinapat ang mouse (Hover) */
+.icon a:hover {
+  transform: translateY(-3px); /* Umaangat nang kaunti */
+}
+
+/* Kanya-kanyang kulay ng brand kapag nai-hover */
+.icon a[aria-label="Facebook"]:hover { color: #1877f2; }
+.icon a[aria-label="Email"]:hover { color: #10b981; } /* Green para bumagay sa gradient text mo */
+.icon a[aria-label="GitHub"]:hover { color: #ffffff; }
+
+  p{
+    width: 450px;
+    margin: auto;
+  }
+  #links{
+    margin-top: 30px;
+  }
+  #tessara{
+    background: transparent;
+  }
+  #container {
+    position: relative;
+    padding: 8rem 2rem;
+
+    color: white;
+    text-align: center;
+    overflow: hidden;
+  }
+  #background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.1;
+    z-index: 1;
+    pointer-events: none;
+  }
+  main {
+    position: relative;
+    z-index: 2;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .gradient-text {
+    background: linear-gradient(135deg, #006400, #10b981);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  p {
+    color: #9ca3af;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  .button {
+    background: #ffffff;
+    color: #0b0f19;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: 20px;
+    
+    
+  }
+  :hover.button{
+    background: linear-gradient(135deg, #006400, #10b981);
+    color: #ffffff;
+
+  }
+</style>
